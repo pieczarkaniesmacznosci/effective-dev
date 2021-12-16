@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package pl.effectivedev.articles.grpc;
+
+option csharp_namespace = "ArticlesService";
+
+service ArticlesBasicService {
+
+  rpc CreateArticle (Article) returns (ArticleId) {}
+  rpc GetArticle (ArticleId) returns (Article) {}
+  rpc GetArticles (ArticleQuery) returns (stream Article) {}
+  rpc UpdateArticle (UpdateArticleRequest) returns (Empty) {}
+  rpc DeleteArticle (ArticleId) returns (Empty) {}
+}
+
+service ArticleLifecycleService {
+
+  rpc GetArticleStatus (ArticleId) returns (ArticleStatus) {}
+  rpc PublishArticle (ArticleId) returns (Empty) {}
+  rpc ReviewArticle (ArticleId) returns (Empty) {}
+  rpc ApproveArticle (ArticleId) returns (Empty) {}
+}
+
+message Empty {}
+
+message ArticleId {
+  string id = 1;
+}
+
+message ArticleQuery {
+  string title = 1;
+  string author= 2;
+}
+
+message UpdateArticleRequest {
+  string id = 1;
+  Article article = 2;
+}
+
+message Article {
+  string title = 1;
+  string author = 2;
+  string content = 3;
+  string category = 4;
+  string summary = 5;
+}
+
+message ArticleMetadata {
+  string id = 1;
+}
+
+message ArticleStatus {
+  enum Status {
+    DRAFT = 0;
+    PUBLISHING = 1;
+    PUBLISHED = 2;
+    IN_REVIEW = 3;
+    READY_FOR_PUBLISHING = 4;
+  }
+  Status status = 1;
+}
+
+message Error {
+  enum Code {
+    MISSING_NAME = 0;
+    MISSING_AUTHOR = 1;
+    MISSING_CONTENT = 2;
+    ARTICLE_NOT_FOUND = 3;
+  }
+  string message = 1;
+  Code code = 2;
+  string traceId = 3;
+}
