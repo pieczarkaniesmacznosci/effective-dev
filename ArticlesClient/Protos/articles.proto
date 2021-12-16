@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package article;
 
-option csharp_namespace = "ArticlesService";
+option csharp_namespace = "ArticlesGrpcClient";
 
 service ArticlesBasicService {
 
