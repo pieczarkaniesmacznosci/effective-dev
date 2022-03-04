@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArticlesService", "ArticlesService\ArticlesService.csproj", "{C44E8832-81E0-4AE8-B40C-56D4E7E3FB36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticlesClient", "ArticlesClient\ArticlesClient.csproj", "{96FB61A8-8F58-4090-A3DF-18D37C347054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArticlesClient", "ArticlesClient\ArticlesClient.csproj", "{96FB61A8-8F58-4090-A3DF-18D37C347054}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB303134-0293-4092-8C63-53492D3EE873}"
+	ProjectSection(SolutionItems) = preProject
+		NodeClient\client.js = NodeClient\client.js
+	EndProjectSection
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsArticlesClient", "NodejsArticlesClient\NodejsArticlesClient.njsproj", "{03D2CBC5-939E-4BBF-ACA5-473C05E81760}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,10 @@ Global
 		{96FB61A8-8F58-4090-A3DF-18D37C347054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96FB61A8-8F58-4090-A3DF-18D37C347054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96FB61A8-8F58-4090-A3DF-18D37C347054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D2CBC5-939E-4BBF-ACA5-473C05E81760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D2CBC5-939E-4BBF-ACA5-473C05E81760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D2CBC5-939E-4BBF-ACA5-473C05E81760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D2CBC5-939E-4BBF-ACA5-473C05E81760}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
